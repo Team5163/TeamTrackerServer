@@ -15,6 +15,10 @@ public class Server {
     
     public static String version = "0.1";
     public static Console console;
+    
+    public static void stop(){
+        console.stop();
+    }
 
     /**
      * @param args the command line arguments
@@ -22,12 +26,12 @@ public class Server {
     public static void main(String[] args){
         console = new Console();
         console.start();
-        for(int a = 0; a < 100; a++){
+        for(int a = 0; a < 10; a++){
             console.printMessage(String.valueOf(a));
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
-                console.printMessage("Error: Sleep interupted");
+                console.printMessage("Error: Sleep interupted in class: " + Server.class.getName());
             }
         }
     }
