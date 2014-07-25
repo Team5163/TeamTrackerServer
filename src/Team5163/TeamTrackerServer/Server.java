@@ -15,6 +15,7 @@ public class Server {
     
     public static String version = "0.1";
     public static Console console;
+    public static Listener listener;
     
     public static void stop(){
         console.stop();

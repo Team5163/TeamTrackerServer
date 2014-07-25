@@ -59,7 +59,7 @@ public class Console implements Runnable{
     
     public void stop(){
         running = false;
-            thread = null;
+        thread = null;
     }
 }
 
