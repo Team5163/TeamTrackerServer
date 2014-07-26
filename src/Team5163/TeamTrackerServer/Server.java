@@ -19,6 +19,7 @@ public class Server {
     
     public static void stop(){
         console.stop();
+        listener.stop();
     }
 
     /**
@@ -27,6 +28,8 @@ public class Server {
     public static void main(String[] args){
         console = new Console();
         console.start();
+        listener = new Listener();
+        listener.start();
         for(int a = 0; a < 10; a++){
             console.printMessage(String.valueOf(a));
             try {

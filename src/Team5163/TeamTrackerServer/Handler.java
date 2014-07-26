@@ -21,14 +21,17 @@ public class Handler implements Runnable{
     }
     
     public void start(){
-        //add itself to listener and get client id
+        thread = new Thread(this);
+        thread.start();
     }
 
     @Override
     public void run() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //get message and check with protical for match and run.
     }
     
-    public void stop(){}
+    public void stop(){
+        thread = null;
+    }
     
 }
